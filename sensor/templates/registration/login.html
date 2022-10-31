@@ -1,0 +1,10 @@
+{% include "base.html" %}
+{% include 'includes/messages.html' %}
+{%block sensorContent%}
+
+<form method="POST">
+{%  csrf_token %}
+{{form.as_p}}
+<input type="submit" value="login" class="btr btn-primary">
+<form>
+{%endblock sensorContent%}

@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+{%if user.is_authenticated%}
+<h3> Hello {{user.username}}</h3> 
+welcome
+<h3>{{operation}} : {{value}}</h3>
+      
+{% else %}
+
+<h3> Hello Guest!</h3>
+<h3> enter with your account </h3>
+<a href="{% url 'sensor:register'%}">regester</a>
+<a href="{% url 'sensor:login' %}">login</a>
+{%endif%}
